@@ -112,10 +112,12 @@
         android:id="@+id/playerTurnLayout"
         android:layout_width="158dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
         android:gravity="top"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="4dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/playerTurnText"
@@ -224,6 +226,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/turnOptionsLayout"
         android:layout_width="166dp"
         android:layout_height="744dp"
         android:layout_marginStart="10dp"
@@ -235,13 +238,14 @@
         app:layout_constraintTop_toBottomOf="@+id/goLinearLayout">
 
         <LinearLayout
+            android:id="@+id/howToPlayLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/howToPlayText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -253,13 +257,14 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/skipTurnLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/skipTurnButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#000000"
@@ -268,6 +273,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/validMoveLayout"
         android:layout_width="198dp"
         android:layout_height="657dp"
         android:layout_marginEnd="10dp"
@@ -277,7 +283,7 @@
         tools:layout_editor_absoluteY="149dp">
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/validMovetext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ED1909"
