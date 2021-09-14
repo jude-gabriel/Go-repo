@@ -55,11 +55,10 @@
         android:id="@+id/selectPlayerLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="1dp"
         android:orientation="vertical"
         android:paddingRight="7dp"
-        app:layout_constraintBottom_toTopOf="@+id/validMoveLayout"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="4dp">
 
         <Button
             android:id="@+id/dumbAIButton"
@@ -135,11 +134,10 @@
         android:id="@+id/goLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="4dp"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_editor_absoluteX="313dp"
+        tools:layout_editor_absoluteY="4dp">
 
         <TextView
             android:id="@+id/goTextView"
@@ -209,12 +207,14 @@
         android:id="@+id/quitGameLayout"
         android:layout_width="161dp"
         android:layout_height="88dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="5dp"
         android:gravity="bottom|right"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blackChipsLayou">
 
         <Button
             android:id="@+id/quitGameButton"
@@ -274,16 +274,13 @@
 
     <LinearLayout
         android:id="@+id/validMoveLayout"
-        android:layout_width="204dp"
-        android:layout_height="632dp"
-        android:layout_marginTop="1dp"
+        android:layout_width="198dp"
+        android:layout_height="657dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
         android:gravity="center|center_vertical"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/quitGameLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectPlayerLayout">
+        tools:layout_editor_absoluteY="149dp">
 
         <TextView
             android:id="@+id/validMovetext"
