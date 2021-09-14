@@ -274,12 +274,14 @@
 
     <LinearLayout
         android:id="@+id/validMoveLayout"
-        android:layout_width="198dp"
-        android:layout_height="657dp"
+        android:layout_width="204dp"
+        android:layout_height="632dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
         android:gravity="center|center_vertical"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/quitGameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/selectPlayerLayout">
 
