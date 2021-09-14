@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#733825"
+    android:backgroundTintMode="add"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/gameBoardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.example.gui.WhiteChipSurfaceView
+            android:id="@+id/whiteChipSurfaceView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="top"
+            android:background="#E8E09B"
+            android:backgroundTint="#733825"
+            android:translationX="-20dp" />
+
+        <com.example.gui.GameBoardSurfaceView
+            android:id="@+id/gameBoardSurfaceView"
+            android:layout_width="500dp"
+            android:layout_height="500dp"
+            android:layout_gravity="center|right" />
+
+        <com.example.gui.BlackChipSurfaceView
+            android:id="@+id/blackChipSurfaceView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="bottom"
+            android:background="#F19F68"
+            android:backgroundTint="#733825"
+            android:translationX="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/selectPlayerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="4dp">
+
+        <Button
+            android:id="@+id/dumbAIButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000000"
+            android:hapticFeedbackEnabled="false"
+            android:text="Dumb AI" />
+
+        <Button
+            android:id="@+id/smartAIButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000000"
+            android:text="Smart AI" />
+
+        <Button
+            android:id="@+id/twoPlayerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#090909"
+            android:text="2-PLAYER" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/networkLayout"
+        android:layout_width="170dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="700dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/networkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000000"
+            android:gravity="right"
+            android:paddingLeft="20dp"
+            android:text="Network Play" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/playerTurnLayout"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="4dp">
+
+        <TextView
+            android:id="@+id/playerTurnText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingLeft="7dp"
+            android:text="Player 1's Turn!"
+            android:textColor="#FFFEFE"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/goLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="313dp"
+        tools:layout_editor_absoluteY="4dp">
+
+        <TextView
+            android:id="@+id/goTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go!"
+            android:textColor="#FBFBFB"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timeAndScoreLayout"
+        android:layout_width="880dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="1250dp"
+        android:layout_marginEnd="200dp"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/gameBoardLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goLinearLayout">
+
+        <TextView
+            android:id="@+id/elapsedTimeText"
+            android:layout_width="434dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Elapsed Time: 18:20"
+            android:textColor="#F1EBEB"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:id="@+id/playerScoreLayout"
+            android:layout_width="486dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/player1ScoreText"
+                android:layout_width="467dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Player 1 Score: 25"
+                android:textColor="#F6F2F2"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/player2ScoreText"
+                android:layout_width="467dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Player 2 Score: 19"
+                android:textColor="#F1EBEB"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/quitGameLayout"
+        android:layout_width="161dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="bottom|right"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blackChipsLayou">
+
+        <Button
+            android:id="@+id/quitGameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000000"
+            android:text="QUIT GAME" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="166dp"
+        android:layout_height="744dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="700dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/gameBoardLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goLinearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="On your turn, click the location you would like to place a chip."
+                android:textColor="#FDFDFD"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#000000"
+                android:text="SKIP TURN" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="198dp"
+        android:layout_height="657dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="149dp">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ED1909"
+            android:text="INVALID MOVE TRY AGAIN"
+            android:textAlignment="center"
+            android:textColor="#090909"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
