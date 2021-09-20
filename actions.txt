@@ -1,0 +1,15 @@
+player actions: 
+ 
+
+Place stone (click the spot on the board, probably use buttons)
+
+Pass turn (button)
+
+Quit game (button)
+ 
+
+What we need to code: 
+
+Capture (when stoned placed in right spot)
+
+Increase stone counter
