@@ -1,11 +1,26 @@
 player actions: 
  
 
-Place stone (click the spot on the board, probably use buttons)
+1) Place stone (click the spot on the board, probably use buttons)
+ 1.1) black must always play first
+ 
+-happy path: doesnt lead to a capture
+-unhappy path: leads to a capture
 
-Pass turn (button)
 
-Quit game (button)
+2) Pass turn (button)
+ 2.1) if both players pass one after the other, the game is over 
+-weird action
+-for coding the end of the game
+
+
+3) Quit game (button)
+-choosing to forfeit, valid choice 
+-common because of our game 
+
+4) Capture
+ -not something the user the user specifically clicks, but big action for us to implement
+ 
  
 
 What we need to code: 
@@ -13,3 +28,6 @@ What we need to code:
 Capture (when stoned placed in right spot)
 
 Increase stone counter
+
+extra idea: 
+-add music! (easy, maybe 2 hours) (fair use so its not copyrighted)
