@@ -1,0 +1,18 @@
+Space to braindump possible ideas for our game
+
+1) timer: (N)
+  add a timer like the one in hw2 that will make a move for either player after a given amount 
+  of inactivity (ex: 10 sec)
+  
+2) handicap options: (N)
+  https://senseis.xmp.net/?Handicap
+  -giving a player handicap stones (extra stones placed on board at the beginning) 
+    **implement at least this^
+    -could give user options for number of stones placed in a pattern
+    -OR could let user place the handicaps at the beginning of the game?
+  -giving a player reverse komi (white giving black extra points)
+  -kosose: allowing 1 player to determine some of the others moves (way too hard)
+  
+ 3) undo button: (N)
+    if the user accidentally places a stone somewhere they didn't mean to, 
+    they can press the undo button if its only been a couple sounds
